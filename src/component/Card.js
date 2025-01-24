@@ -16,12 +16,13 @@ const Card = ({item}) => {
   }, [cart]);
   return (
     <>
-    
-   <h1 style={{marginLeft:80,marginTop:30}}>Card Items</h1>
-         
+    <div className="container mt-4">
+   <h1 className="mb-4 text-center">Cart Items </h1>
+   <div className="row">
        {
         cart.map(item => (
-          <Toast style={{marginLeft:500,marginTop:30}}>
+          <div key={item.id} className="col-12 col-md-6 col-lg-4 mb-4">
+          <Toast>
       <Toast.Header>
         <img src={item.image} style={{width:50,height:50}} className="rounded me-2 " alt="" />
         <strong className="me-auto">{item.title}</strong>
@@ -29,19 +30,21 @@ const Card = ({item}) => {
       </Toast.Header>
       <Toast.Body>Price:{item.price}</Toast.Body>
     </Toast>
+    </div>
          
         
          
         ))}
        
 
-    
-    <div>
-    <h2 style={{marginLeft:80,marginTop:30}}> Totalitem:  {cart.length}</h2>  
-    <h2 style={{marginLeft:80,}}> Total Amount:{total} </h2>  
-    <Button style={{marginLeft:80,marginTop:10}}>
+    </div>
+    <div className="mt-4 text-center">
+    <h2> Totalitem:  {cart.length}</h2>  
+    <h2> Total Amount:{total} </h2>  
+    <Button className="mt-3" variant="primary">
       Check out
     </Button>
+    </div>
     </div>
     </>
   );
