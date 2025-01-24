@@ -24,19 +24,13 @@ const Header = ({item}) => {
             <Nav.Link className=" text-white"href="/singup">singup</Nav.Link>
             <Nav.Link className=" text-white" href="/login">login</Nav.Link>
             <Nav.Link className=" text-white"href="/card">Card</Nav.Link>
-            
-         
-       
-            <input className="serchinput" type="text"  placeholder=" Search Ads Cars, mobile phone and More...."/>
+             <input className="serchinput" type="text"  placeholder=" Search Ads Cars, mobile phone and More...."/>
             <div className="search-line">
-
-        
-         <FiSearch/>
+            <FiSearch/>
             </div>
             <div className='drop'>
             <Dropdown as={ButtonGroup}>
       <Button variant="light" > <Nav.Link  className=" text-dark" href="/card" >   <FontAwesomeIcon icon={faShoppingCart} />{cart.length}
-      
       
       </Nav.Link></Button>
 

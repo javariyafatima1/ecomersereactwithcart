@@ -1,150 +1,116 @@
+
 import React from "react";
-import { Box, Typography, Grid, Link, IconButton, Stack } from "@mui/material";
-import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material";
+import { Box, Typography, Grid, Link, IconButton } from "@mui/material";
+import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material";
 
 const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#f5f5f5",
-        padding: "2rem 1rem",
-        borderTop: "1px solid #ddd",
+        backgroundColor: "#4f7b85",
+        color: "#fff",
+        p: 4,
+        mt: 4,
       }}
     >
       <Grid container spacing={4}>
-        {/* Popular Categories */}
+        {/* About Us Section */}
         <Grid item xs={12} sm={6} md={3}>
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
-            Popular Categories
-          </Typography>
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Cars
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Flats for Rent
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Mobile Phones
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Jobs
-              </Link>
-            </li>
-          </ul>
-        </Grid>
-
-        {/* Trending Searches */}
-        <Grid item xs={12} sm={6} md={3}>
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
-            Trending Searches
-          </Typography>
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Bikes
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Watches
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Books
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Dogs
-              </Link>
-            </li>
-          </ul>
-        </Grid>
-
-        {/* About Us */}
-        <Grid item xs={12} sm={6} md={3}>
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+          <Typography variant="h6" gutterBottom>
             About Us
           </Typography>
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Who We Are
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Careers
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link href="#" color="text.secondary" underline="hover">
-                Blog
-              </Link>
-            </li>
-          </ul>
+          <Typography variant="body2">
+            We are committed to providing you with the best online shopping
+            experience. Explore our wide range of products at competitive
+            prices.
+          </Typography>
         </Grid>
 
-        {/* Follow Us */}
+        {/* Customer Service Section */}
         <Grid item xs={12} sm={6} md={3}>
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+          <Typography variant="h6" gutterBottom>
+            Customer Service
+          </Typography>
+          <Link href="/contact" color="inherit" underline="hover">
+            Contact Us
+          </Link>
+          <br />
+          <Link href="/faq" color="inherit" underline="hover">
+            FAQ
+          </Link>
+          <br />
+          <Link href="/returns" color="inherit" underline="hover">
+            Returns
+          </Link>
+        </Grid>
+
+        {/* Quick Links Section */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Typography variant="h6" gutterBottom>
+            Quick Links
+          </Typography>
+          <Link href="/shop" color="inherit" underline="hover">
+            Shop
+          </Link>
+          <br />
+          <Link href="/about" color="inherit" underline="hover">
+            About Us
+          </Link>
+          <br />
+          <Link href="/privacy-policy" color="inherit" underline="hover">
+            Privacy Policy
+          </Link>
+        </Grid>
+
+        {/* Social Media Section */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Typography variant="h6" gutterBottom>
             Follow Us
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Box>
             <IconButton
-              href="#"
-              aria-label="Facebook"
-              sx={{ color: "#4267B2" }}
+              href="https://facebook.com"
+              target="_blank"
+              sx={{ color: "#fff" }}
             >
               <Facebook />
             </IconButton>
-            <IconButton href="#" aria-label="Twitter" sx={{ color: "#1DA1F2" }}>
+            <IconButton
+              href="https://twitter.com"
+              target="_blank"
+              sx={{ color: "#fff" }}
+            >
               <Twitter />
             </IconButton>
             <IconButton
-              href="#"
-              aria-label="YouTube"
-              sx={{ color: "#FF0000" }}
-            >
-              <YouTube />
-            </IconButton>
-            <IconButton
-              href="#"
-              aria-label="Instagram"
-              sx={{ color: "#C13584" }}
+              href="https://instagram.com"
+              target="_blank"
+              sx={{ color: "#fff" }}
             >
               <Instagram />
             </IconButton>
-          </Stack>
+            <IconButton
+              href="https://youtube.com"
+              target="_blank"
+              sx={{ color: "#fff" }}
+            >
+              <YouTube />
+            </IconButton>
+          </Box>
         </Grid>
       </Grid>
 
-      {/* Footer Bottom */}
+      {/* Bottom Footer */}
       <Box
         sx={{
-          borderTop: "1px solid #ddd",
-          mt: 4,
-          pt: 2,
           textAlign: "center",
-          color: "text.secondary",
+          mt: 4,
+          borderTop: "1px solid #555",
+          pt: 2,
         }}
       >
         <Typography variant="body2">
-          Free Classifieds in Pakistan. © 2006-2022 OLX
+          © {new Date().getFullYear()} E-Commerce App. All rights reserved.
         </Typography>
       </Box>
     </Box>
@@ -152,3 +118,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
