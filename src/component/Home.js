@@ -6,31 +6,30 @@ import { CartContext } from '../context/Context';
 import Product from './Product';
 import Footer from './Footer';
 
-
-
-
 const Home = () => {
-  const  {state:{products},
-} = CartContext();
-  console.log(products)
+  const {
+    state: { products },
+  } = CartContext();
+
   return (
     <div>
-      <Baner />
-      <div className='product'>
-       <div className='productcanta'>
-       {
-        products.map((item)=>{
-         return   <Product item={item} key={item.id}/>
-        })
-      }
-       </div>
-      </div>
-     
 
-     
-     <Footer/>
+      <Baner />
+      <div className="product">
+        <div className="product-container container">
+        
+          <div className="row">
+            {products.map((item) => (
+              <div key={item.id} className="col-6 col-md-4 col-lg-3 mb-4">
+                <Product item={item} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
-}
+};
 
 export default Home;
