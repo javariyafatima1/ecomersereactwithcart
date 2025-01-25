@@ -12,7 +12,7 @@ const Product = ({item}) => {
   
   return (
    <div className='flex'>
-    <Card style={{height:360,marginTop:30,width:300,marginLeft:10,}}>
+    <Card style={{height:360,marginTop:30,width:300,marginLeft:10}}>
       <Card.Img variant='top'style={{height:100,marginTop:10,width:150,marginLeft:100}} src={item.image}/>
       <Card.Body>
       
